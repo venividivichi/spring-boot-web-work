@@ -1,5 +1,5 @@
 .center_div{
-    margin:11% auto;
+    margin:7% auto;
     width:27% /* value of your choice which suits your alignment */
 }
 
@@ -46,7 +46,7 @@ label {
 }
 .jumbotron {
 
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 35px;
 }
 
@@ -121,4 +121,9 @@ label {
     margin-bottom: 15px;
     margin-top: 15px;
 
+}
+#error {
+    margin-top: 15px;
+    font-family: Garamond;
+    font-size: 1.5em;
 }

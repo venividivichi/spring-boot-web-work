@@ -20,34 +20,50 @@
     <link href="../static/css/footer.css"
           th:href="@{/css/footer.css}" rel="stylesheet" media="screen"/>
 
+    <script src="../static/js/valid.js"
+            th:src="@{/js/valid.js}"></script>
+
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
 </head>
 <body>
 <div class="container center_div">
 
-<div th:if="${param.error}">
+
+    <div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<div id="error" th:if="${param.error}">
     Invalid username and password.
 </div>
+
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
 
     <div class="jumbotron">
-<form th:action="@{/j_spring_security_check}" method="post">
+<form id = "logForm" data-toggle="validator" role="form" th:action="@{/j_spring_security_check}" method="post">
 
     <div class="form-group">
         <div class="col-sm-12">
-        <label for="username" > User Name :</label>
-        <input type="text" id="username" class="form-control input-group-lg" autocapitalize="off" title="Enter username" placeholder="Username" name="username"/>
+        <label for="username" class="control-label"> User Name :</label>
+        <input type="text" id="username" class="form-control input-group-lg" autocapitalize="off" title="Enter username" placeholder="Username" name="username" th:required="true"/>
         </div>
     </div>
 
     <div class="form-group">
 
         <div class="col-sm-12">
-        <label for="password" >Password: </label>
-        <input type="password" id="password" class="form-control input-group-lg" title="Enter password" placeholder="Password" name="password"/>
+        <label for="password" class="control-label">Password: </label>
+        <input type="password" id="password" data-minlength="4" class="form-control input-group-lg" title="Enter password" placeholder="Password" name="password" th:required="true"/>
+            <div class="help-block">Minimum of 4 characters</div>
         </div>
 
     </div>
@@ -63,7 +79,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <p class="text-muted">Place sticky footer content here.</p>
+                    <p class="text-muted"></p>
                 </div>
             </div>
         </footer>
