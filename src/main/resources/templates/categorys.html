@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
+
+    <link href="../static/css/guru.css"
+          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
+
+    <script src="../static/js/pag.js"
+            th:src="@{/js/pag.js}"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="table-responsive">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(categorys)}">
+        <h2>Categorys List</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr th:each="category : ${categorys}">
+                <td th:text="${category.id}"><a href="/category/${category.id}">Id</a></td>
+                <td th:text="${category.name}">Name</td>
+                <td><a th:href="${'/category/' + category.id}">View</a></td>
+                <td><a th:href="${'/category/edit/' + category.id}">Edit</a></td>
+                <td><a th:href="${'/categorys/delete/' + category.id}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+            <div class="col-md-12 text-center">
+                <ul class="pagination pagination-lg pager" id="myPager"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"> </p>
+        </div>
+    </footer>
+
+</div>
+
+
+</body>
+</html>

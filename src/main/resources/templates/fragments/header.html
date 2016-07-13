@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
+
+    <link href="../static/css/guru.css"
+          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div th:fragment="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="active"><a href="#" th:href="@{/}">Home</a></li>
+
+                    </ul>
+                 </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav nav-pills">
+                    <form style="background-color: #ccc" th:action="@{/j_spring_security_logout}" method="post" id="logoutForm">
+                        <input type="hidden" name="${_csrf.parameterName}"
+                               value="${_csrf.token}" />
+                        <!--  <input type="submit" value="Log Out" /> -->
+                        <button type="submit" class="btn btn-primary">Log Out</button>
+                    </form>
+                    </ul>
+                </ul>
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     <ul class="nav navbar-nav">
+                         <ul class="nav nav-pills">
+                         <li role="presentation" class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Review param<span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                            <!-- <li><a href="#" th:href="@{/products}">Products</a></li> -->
+                                 <li><a href="#" th:href="@{/customers}">Customers</a></li>
+                                 <li><a href="#" th:href="@{/categorys}">Categorys</a></li>
+                                 <li><a href="#" th:href="@{/executants}">Executants</a></li>
+                           </ul>
+                         </li>
+                         <li role="presentation" class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create param docs<span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                               <!-- <li><a href="#" th:href="@{/product/new}">Create Product</a></li> -->
+                                  <li><a href="#" th:href="@{/customer/new}">Create Customer</a></li>
+                                  <li><a href="#" th:href="@{/category/new}">Create Category</a></li>
+                                  <li><a href="#" th:href="@{/executant/new}">Create Executant</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#" th:href="@{/mainDoc/new}">Create MainDocument</a></li>
+                            <li><a href="#" th:href="@{/mainDocs}">mainDocs</a></li>
+
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="jumbotron">
+                <div class="row text-center">
+                    <div class="">
+                        <h2>Document Registration</h2>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <img src="../../static/images/bla.jpg" width="500"
+                         th:src="@{/images/bla.jpg}"/>
+                </div>
+            </div>
+
+
+
+
+     </div>
+
+
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <p class="text-muted">Place sticky footer content here.</p>
+            </div>
+        </div>
+    </footer>
+
+
+ </body>
+ </html>

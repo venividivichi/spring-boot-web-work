@@ -1,0 +1,124 @@
+.center_div{
+    margin:11% auto;
+    width:27% /* value of your choice which suits your alignment */
+}
+
+.dropdown .dropdown-menu {
+
+    font-family:    Garamond;
+    font-size:      0.85em;
+
+}
+.container-fluid {
+
+    font-family: Garamond;
+    font-size: 1.6em;
+    padding: 15px 27px;
+}
+
+.container-fluid .btn-primary {
+
+
+    padding: 10px 10px 10px 10px;
+    font-family: Garamond;
+    font-size: 0.88em;
+}
+.container-fluid .navbar-nav{
+
+    padding-left: 17px;
+}
+
+.center_div .input-group-lg {
+    height: 40px;
+    margin-bottom: 12px;
+    font-family: Garamond;
+    font-size: 1.6em;
+}
+label {
+    margin-bottom: 12px;
+    font-family: Verdana;
+    font-size: 1.3em;
+}
+.center_div .jumbotron {
+
+    padding: 60px 60px 60px 60px;
+    background: #cccccc;
+}
+.jumbotron {
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.block {
+    background: #eee;
+    height: 67px;
+    width: 1140px;
+    borde-radius: 5px;
+}
+.block .pic1 {
+    display:block;
+}
+.footer {
+    position: inherit;
+    margin-top: 25px;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background: powderblue;
+}
+
+.container .btn-primary {
+
+    padding: 8px 14px;
+    font-family: Garamond;
+    font-size: 0.85em;
+}
+.container .form-group {
+
+    margin: 35px -10px;
+}
+
+#btn_log {
+
+    padding: 8px 15px;
+    margin: 10px;
+    font-family: Garamond;
+    font-size: 1.5em;
+}
+
+#btn_cat {
+
+    padding: 10px 18px;
+    font-family: Garamond;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#btn_cust {
+
+    padding: 10px 18px;
+    font-family: Garamond;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#btn_exe {
+
+    padding: 10px 18px;
+    font-family: Garamond;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+#btn_doc {
+
+    padding: 10px 18px;
+    font-family: Garamond;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}

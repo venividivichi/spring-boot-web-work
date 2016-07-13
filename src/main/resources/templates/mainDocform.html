@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
+
+    <link href="../static/css/guru.css"
+          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Documents</h2>
+    <div>
+        <form class="form-horizontal" th:object="${mainDoc}" th:action="@{/mainDoc}" method="post">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">DocumentID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{docID}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-10">
+               <input type="text" class="form-control" th:field="*{category}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Executant</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{executant}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">ShortDiscription</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{shortDis}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">DateInput</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" pattern="dd/MM/yyyy" th:field="*{dateCome}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">DateDone</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" pattern="dd/MM/yyyy" th:field="*{dateDone}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Customer</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{customer}"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary" id="btn_doc">Add</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"> </p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

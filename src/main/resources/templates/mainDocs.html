@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en" th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
+
+    <link href="../static/css/guru.css"
+          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
+    <script src="../static/js/pag.js"
+            th:src="@{/js/pag.js}"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="table-responsive">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(mainDocs)}">
+        <h2>Documents List</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>docID</th>
+                <th>Category</th>
+                <th>Executant</th>
+                <th>ShortDis</th>
+                <th>DateIn</th>
+                <th>DateDone</th>
+                <th>Customer</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr th:each="mainDoc : ${mainDocs}">
+                <td th:text="${mainDoc.id}"><a href="/mainDoc/${mainDoc.id}">Id</a></td>
+                <td th:text="${mainDoc.docID}">DocumentID</td>
+                <td th:text="${mainDoc.category.name}">Category</td>
+                <td th:text="${mainDoc.executant.PIB}">Executant</td>
+                <td th:text="${mainDoc.shortDis}">Discription</td>
+                <td th:text="${mainDoc.dateCome}">DateIn</td>
+                <td th:text="${mainDoc.dateDone}">DateDone</td>
+                <td th:text="${mainDoc.customer.nameO}">Customer</td>
+                <td><a th:href="${'/mainDoc/' + mainDoc.id}">View</a></td>
+                <td><a th:href="${'/mainDoc/edit/' + mainDoc.id}">Edit</a></td>
+                <td><a th:href="${'/mainDoc/delete/' + mainDoc.id}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+            <div class="col-md-12 text-center">
+                <ul class="pagination pagination-lg pager" id="myPager"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"> </p>
+        </div>
+    </footer>
+
+</div>
+
+
+</body>
+</html>
