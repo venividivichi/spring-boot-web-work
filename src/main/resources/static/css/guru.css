@@ -59,6 +59,7 @@ label {
 .block .pic1 {
     display:block;
 }
+
 .footer {
     position: inherit;
     margin-top: 25px;
@@ -67,6 +68,7 @@ label {
     /* Set the fixed height of the footer here */
     height: 60px;
     background: powderblue;
+
 }
 
 .container .btn-primary {
@@ -126,4 +128,8 @@ label {
     margin-top: 15px;
     font-family: Garamond;
     font-size: 1.5em;
+}
+.container .table-striped {
+
+    margin-top: 25px;
 }

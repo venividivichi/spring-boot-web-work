@@ -9,14 +9,7 @@ import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 
 @Configuration
 public class WebConfiguration {
-    /**
-    @Bean
-    ServletRegistrationBean h2servletRegistration(){
-        ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
-        registrationBean.addUrlMappings("/console/*");
-        return registrationBean;
-    }  шо то?) ваще не їбу )) може для тої бд Н2
-    **/
+    
     @Bean(name = "dataSource")
     public DriverManagerDataSource dataSource() {
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();

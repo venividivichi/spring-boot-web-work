@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 
-    <title>Spring Framework Guru</title>
+    <title>Documentary</title>
 
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet" />
     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+
+    <link href="../static/css/footer.css"
+          th:href="@{/css/footer.css}" rel="stylesheet" media="screen"/>
+
 </head>
 <body>
 
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <footer>
+
+
+
+        <ul>
+
+            <li>
+
+                <p class="home"></p>
+
+                <a class="logo" href="#" th:href="@{/}">GSC <i>&copy; 2016</i></a>
+
+            </li>
+            <li>
+
+                <p class="services"></p>
+
+                <ul>
+
+                </ul>
+            </li>
+
+            <li>
+
+                <p class="reachus"></p>
+
+                <ul>
+
+                </ul>
+
+            </li>
+
+            <li>
+
+                <p class="clients"></p>
+
+
+                <ul>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </footer>
+
 </div>
+
+
 </body>
 </html>

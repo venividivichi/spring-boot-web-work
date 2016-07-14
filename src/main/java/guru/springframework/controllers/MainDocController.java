@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by user on 13.06.2016.
@@ -87,6 +88,7 @@ public class MainDocController {
         mainDocDB.setCategory(categoryService.getCategoryById(mainDoc.getCategory()));
         mainDocDB.setExecutant(executantService.getExecutantById(mainDoc.getExecutant()));
 
+        //List<Category> categorys = categoryService.listAllCategorys();
 
         mainDocDB.setDateCome(mainDoc.getDateCome());
         mainDocDB.setDateDone(mainDoc.getDateDone());
@@ -94,6 +96,7 @@ public class MainDocController {
 
         mainDocDB = mainDocService.saveMainDoc(mainDocDB);
         model.addAttribute("mainDoc", mainDocDB);
+        //model.addAttribute("Caregory", categorys);
         //mainDocService.saveMainDoc(mainDoc);
         return "redirect:/mainDoc/" + mainDocDB.getId();
     }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Spring Security Example </title>
+    <title>Documentary</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
           th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
@@ -16,9 +16,10 @@
 
     <link href="../static/css/guru.css"
           th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
-
+    <!--
     <link href="../static/css/footer.css"
           th:href="@{/css/footer.css}" rel="stylesheet" media="screen"/>
+   -->
 
     <script src="../static/js/valid.js"
             th:src="@{/js/valid.js}"></script>
@@ -63,12 +64,12 @@
         <div class="col-sm-12">
         <label for="password" class="control-label">Password: </label>
         <input type="password" id="password" data-minlength="4" class="form-control input-group-lg" title="Enter password" placeholder="Password" name="password" th:required="true"/>
-            <div class="help-block">Minimum of 4 characters</div>
+        <!--    <div class="help-block">Minimum of 4 characters</div> -->
         </div>
 
     </div>
 
-    <div> <input type="submit" class="btn btn-primary" id="btn_log"  value="Sign In"/></div>
+    <div> <input type="submit" class="btn btn-primary " id="btn_log"  value="Sign In"/></div>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 </form>
     </div>
