@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
 
+
+    <link href="../static/css/footer_create.css"
+          th:href="@{/css/footer_create.css}" rel="stylesheet" media="screen"/>
+
 </head>
 <body>
 <div class="container">
@@ -52,12 +56,41 @@
         </form>
     </div>
 
+    <!--
     <footer class="footer">
         <div class="container">
             <p class="text-muted"> </p>
         </div>
     </footer>
+    -->
 
 </div>
+<footer>
+
+    <ul>
+        <li>
+            <p class="home"></p>
+            <a class="logo" href="#" th:href="@{/}">GSC <i>&copy; 2016</i></a>
+        </li>
+        <li>
+            <p class="services"></p>
+            <ul>
+            </ul>
+        </li>
+
+        <li>
+            <p class="reachus"></p>
+            <ul>
+            </ul>
+        </li>
+        <li>
+            <p class="clients"></p>
+
+            <ul>
+            </ul>
+        </li>
+    </ul>
+
+</footer>
 </body>
 </html>
