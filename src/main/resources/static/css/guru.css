@@ -42,7 +42,7 @@ label {
 .center_div .jumbotron {
 
     padding: 60px 60px 60px 60px;
-    background: #cccccc;
+    background: #eee;
 }
 .jumbotron {
 
@@ -132,4 +132,14 @@ label {
 .container .table-striped {
 
     margin-top: 25px;
+}
+
+.center_div #panel {
+
+    height: 50px;
+    width: 1140px;
+    background-color: #eee;
+    margin-left: -325px;
+    margin-top: -110px;
+    margin-bottom: 90px;
 }

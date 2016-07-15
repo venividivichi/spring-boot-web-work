@@ -26,20 +26,18 @@
 
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
+    <link href="../static/css/footer_log.css"
+          th:href="@{/css/footer_log.css}" rel="stylesheet" media="screen"/>
+
 </head>
 <body>
 <div class="container center_div">
 
 
-    <div>
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <p class="text-muted"></p>
-                </div>
-            </div>
-        </footer>
+    <div id = "panel">
+
     </div>
+
 
 <div id="error" th:if="${param.error}">
     Invalid username and password.
@@ -75,7 +73,7 @@
     </div>
 
 
-
+ <!--
     <div>
         <footer class="footer">
             <div class="container">
@@ -85,7 +83,56 @@
             </div>
         </footer>
     </div>
+    -->
 </div>
 
 </body>
+
+<footer>
+
+
+
+    <ul>
+
+        <li>
+
+            <p class="home"></p>
+
+            <a class="logo" href="#" th:href="@{/}">GSC <i>&copy; 2016</i></a>
+
+        </li>
+        <li>
+
+            <p class="services"></p>
+
+            <ul>
+
+            </ul>
+        </li>
+
+        <li>
+
+            <p class="reachus"></p>
+
+            <ul>
+
+            </ul>
+
+        </li>
+
+        <li>
+
+            <p class="clients"></p>
+
+
+            <ul>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</footer>
+
 </html>
