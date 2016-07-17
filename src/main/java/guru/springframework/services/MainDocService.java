@@ -2,13 +2,15 @@ package guru.springframework.services;
 
 import guru.springframework.domain.MainDoc;
 
+import java.util.List;
+
 /**
  * Created by user on 13.06.2016.
  */
 
 public interface MainDocService {
 
-    Iterable<MainDoc> listAllMainDocs();
+    List<MainDoc> listAllMainDocs();
 
     MainDoc getMainDocById(Integer id);
 

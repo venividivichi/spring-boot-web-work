@@ -71,7 +71,7 @@ public class Executant implements Serializable {
         this.mainDocs = mainDocs;
     }
 
-    /*
+/*
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Executant{");
@@ -82,6 +82,6 @@ public class Executant implements Serializable {
         sb.append(", mainDocs=").append(mainDocs);
         sb.append('}');
         return sb.toString();
-    } */
+    }*/
 }
 

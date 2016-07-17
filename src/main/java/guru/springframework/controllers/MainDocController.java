@@ -1,6 +1,8 @@
 package guru.springframework.controllers;
 
 import guru.springframework.domain.Category;
+import guru.springframework.domain.Customer;
+import guru.springframework.domain.Executant;
 import guru.springframework.domain.MainDoc;
 import guru.springframework.services.CategoryService;
 import guru.springframework.services.CustomerService;
@@ -51,12 +53,21 @@ public class MainDocController {
     @RequestMapping("mainDoc/{id}")
     public String showMainDoc (@PathVariable Integer id, Model model){
         model.addAttribute("mainDoc", mainDocService.getMainDocById(id));
+
+
+
         return "mainDocshow";
     }
 
     @RequestMapping("mainDoc/edit/{id}")
     public String edit(@PathVariable Integer id, Model model){
         model.addAttribute("mainDoc", mainDocService.getMainDocById(id));
+        List<Category> categories = categoryService.listAllCategorys();
+        List<Customer> customers = customerService.listAllCustomers();
+        List<Executant> executants = executantService.listAllExecutants();
+        model.addAttribute("customers", customers);
+        model.addAttribute("categories", categories);
+        model.addAttribute("executants", executants);
         return "mainDocform";
     }
 
@@ -65,6 +76,14 @@ public class MainDocController {
         if (result.hasErrors()){
             return "mainDocform";
         }
+
+        List<Category> categories = categoryService.listAllCategorys();
+        List<Customer> customers = customerService.listAllCustomers();
+        List<Executant> executants = executantService.listAllExecutants();
+        model.addAttribute("customers", customers);
+        model.addAttribute("categories", categories);
+        model.addAttribute("executants", executants);
+
         model.addAttribute("mainDoc", new MainDoc());
         return "mainDocform";
     }
@@ -79,8 +98,16 @@ public class MainDocController {
     @RequestMapping(value = "mainDoc", method = RequestMethod.POST)
     public String saveMainDoc (@ModelAttribute guru.springframework.domain.ui.MainDoc mainDoc, BindingResult result, Model model){
 
+        MainDoc mainDocDB = null;
+
         System.out.println("666: "+ mainDoc);
-        MainDoc mainDocDB = new MainDoc();
+
+        if (mainDoc.getId()==null){
+            mainDocDB = new MainDoc();
+        } else {
+            mainDocDB = mainDocService.getMainDocById(mainDoc.getId());
+        }
+
         mainDocDB.setDocID(mainDoc.getDocID());
         mainDocDB.setShortDis(mainDoc.getShortDis());
         mainDocDB.setCustomer(customerService.getCustomerById(mainDoc.getCustomer()));
@@ -88,7 +115,7 @@ public class MainDocController {
         mainDocDB.setCategory(categoryService.getCategoryById(mainDoc.getCategory()));
         mainDocDB.setExecutant(executantService.getExecutantById(mainDoc.getExecutant()));
 
-        //List<Category> categorys = categoryService.listAllCategorys();
+
 
         mainDocDB.setDateCome(mainDoc.getDateCome());
         mainDocDB.setDateDone(mainDoc.getDateDone());
@@ -104,7 +131,7 @@ public class MainDocController {
     @RequestMapping("mainDoc/delete/{id}")
     public String delete(@PathVariable Integer id){
         mainDocService.deleteMainDoc(id);
-        return "redirect:/MainDoc";
+        return "redirect:/mainDocs";
     }
 
 }

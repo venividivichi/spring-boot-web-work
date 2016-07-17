@@ -11,6 +11,7 @@ import java.util.Date;
 
 
 public class MainDoc implements Serializable{
+    private Integer id;
     private Integer docID;
     private String shortDis;
     private Date dateCome;
@@ -18,6 +19,13 @@ public class MainDoc implements Serializable{
 
     private int customer;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     private int category;
 

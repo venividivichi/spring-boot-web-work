@@ -77,8 +77,8 @@ public class Customer implements Serializable {
 
         return result;
     }
-*/
- /*
+
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Customer{");
@@ -88,5 +88,5 @@ public class Customer implements Serializable {
         sb.append(", mainDocs=").append(mainDocs);
         sb.append('}');
         return sb.toString();
-    } */
+    }*/
 }

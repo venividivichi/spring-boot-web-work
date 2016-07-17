@@ -5,6 +5,8 @@ import guru.springframework.repositories.MainDocRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by user on 13.06.2016.
  */
@@ -19,7 +21,7 @@ public class MainDocServiceImpl implements MainDocService {
     }
 
     @Override
-    public Iterable<MainDoc> listAllMainDocs() {
+    public List<MainDoc> listAllMainDocs() {
         return mainDocRepository.findAll();
     }
 

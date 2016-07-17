@@ -5,6 +5,9 @@ import guru.springframework.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
@@ -16,7 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Iterable<Customer> listAllCustomers() {
+    public List<Customer> listAllCustomers() {
         return customerRepository.findAll();
     }
 

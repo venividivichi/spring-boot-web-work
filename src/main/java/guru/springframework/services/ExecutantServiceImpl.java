@@ -5,6 +5,8 @@ import guru.springframework.repositories.ExecutantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by user on 13.06.2016.
  */
@@ -20,7 +22,7 @@ public class ExecutantServiceImpl implements ExecutantService {
     }
 
     @Override
-    public Iterable<Executant> listAllExecutants() {
+    public List<Executant> listAllExecutants() {
         return executantRepository.findAll();
     }
 

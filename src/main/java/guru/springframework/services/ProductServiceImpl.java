@@ -5,6 +5,8 @@ import guru.springframework.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -16,7 +18,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Iterable<Product> listAllProducts() {
+    public List<Product> listAllProducts() {
         return productRepository.findAll();
     }
 
