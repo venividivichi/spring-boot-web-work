@@ -56,7 +56,7 @@ public class ExecutantController {
     @RequestMapping("executant/delete/{id}")
     public String delete(@PathVariable Integer id){
         executantService.deleteExecutant(id);
-        return "redirect:/executant";
+        return "redirect:/executants";
     }
 
 
