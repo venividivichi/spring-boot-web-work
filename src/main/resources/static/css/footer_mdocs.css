@@ -105,10 +105,10 @@ footer{
     border-radius: 6px;
     z-index:-2;
     margin-left: 366px;
-    margin-bottom: -50px;
 
 
-    background-color:#eee;
+
+  /*  background-color:#eee; */
 }
 
 /* Set a width to the outermost UL and center it */
@@ -121,6 +121,7 @@ footer > ul{
     left:50%;
     bottom:0;
     margin-left:-480px;
+    margin-bottom: 20px;
 
     z-index:-1;
 }
@@ -163,9 +164,9 @@ footer a.logo{
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     display: inline-block;
-    margin-top: 7px;
+   /* margin-top: 7px; */
 }
 
 footer a.logo i{
@@ -202,7 +203,7 @@ footer p{
     text-transform: uppercase;
     text-shadow: 0 1px rgba(0,0,0,0.1);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    margin-bottom: 20px;
+   /* margin-bottom: 20px; */
     opacity:0.9;
     cursor:default;
 

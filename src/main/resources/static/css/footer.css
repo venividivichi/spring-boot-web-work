@@ -86,7 +86,7 @@ footer{
     position:relative;
     z-index:-2;
 
-   background-color:#eee;
+  /* background-color:#eee; */
 /*
     background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
     background-image:-moz-linear-gradient(top, #31353a, #2f3337);
@@ -145,9 +145,9 @@ footer a.logo{
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
-    margin-left: -110px;
-
-    margin-top: 7px;
+    /* margin-left: 16px; */
+    display: inline-block;
+    /* margin-top: 7px; */
 }
 
 footer a.logo i{
