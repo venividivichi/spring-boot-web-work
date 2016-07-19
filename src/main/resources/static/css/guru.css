@@ -46,8 +46,8 @@ label {
 }
 .jumbotron {
 
-    margin-top: 35px;
-    margin-bottom: 35px;
+   /* margin-top: 35px; */
+  /*  margin-bottom: 35px; */
 }
 
 .block {
@@ -142,4 +142,13 @@ label {
     margin-left: -325px;
     margin-top: -110px;
     margin-bottom: 90px;
+}
+.center_div .navbar-default{
+
+    width: 1200px;
+    margin-left:-588px;
+    left:50%;
+    margin-bottom: 70px;
+
+
 }

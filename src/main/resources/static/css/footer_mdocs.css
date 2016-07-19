@@ -279,3 +279,10 @@ footer p.clients{
 footer p.clients:before{
     background-position: 0 -69px;
 }
+.container .navbar-default{
+    margin-top: 20px;
+}
+/*
+.container .row{
+    margin-top: 15px;
+} */

@@ -101,7 +101,7 @@ footer{
     margin-left: 366px;
     margin-bottom: -50px;
 
-    background-color:#eee;
+  /*  background-color:#eee; */
 }
 
 /* Set a width to the outermost UL and center it */
@@ -114,7 +114,7 @@ footer > ul{
     left:50%;
     bottom:0;
     margin-left:-480px;
-
+    margin-bottom: 25px;
     z-index:-1;
 }
 
@@ -156,9 +156,9 @@ footer a.logo{
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
-    margin-left: 16px;
+  /*  margin-left: 16px; */
     display: inline-block;
-    margin-top: 7px;
+   /* margin-top: 7px; */
 }
 
 footer a.logo i{
@@ -270,4 +270,7 @@ footer p.clients{
 
 footer p.clients:before{
     background-position: 0 -69px;
+}
+.container .navbar-default{
+    margin-top: 20px;
 }

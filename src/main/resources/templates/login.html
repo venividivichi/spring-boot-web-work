@@ -15,11 +15,7 @@
             th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 
     <link href="../static/css/guru.css"
-          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>
-    <!--
-    <link href="../static/css/footer.css"
-          th:href="@{/css/footer.css}" rel="stylesheet" media="screen"/>
-   -->
+          th:href="@{/css/guru.css}" rel="stylesheet" media="screen"/>[
 
     <script src="../static/js/valid.js"
             th:src="@{/js/valid.js}"></script>
@@ -31,13 +27,11 @@
 
 </head>
 <body>
+
 <div class="container center_div">
 
 
-    <div id = "panel">
-
-    </div>
-
+    <nav class="navbar navbar-default">
 
 <div id="error" th:if="${param.error}">
     Invalid username and password.
@@ -46,7 +40,7 @@
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
-
+    </nav>
     <div class="jumbotron">
 <form id = "logForm" data-toggle="validator" role="form" th:action="@{/j_spring_security_check}" method="post">
 

@@ -26,6 +26,8 @@ body{
     /* Create a page-wide stacking context
     (so that negative margins work as you expect) */
 
+    background: url('../images/fon7.jpg');
+
     position:relative;
     z-index:0;
 
@@ -259,4 +261,7 @@ footer p.clients{
 
 footer p.clients:before{
     background-position: 0 -69px;
+}
+.container .navbar-default{
+    margin-top: 20px;
 }
