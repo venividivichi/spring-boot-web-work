@@ -31,42 +31,15 @@
             <input type="hidden" class="form-control" th:field="*{id}"/>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">DocumentID</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">DocumentID :</label>
+                <div class="col-sm-10 center-block">
                     <input type="text" class="form-control" th:field="*{docID}" th:required="true"/>
                 </div>
             </div>
-            <!--
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Category</label>
-                            <div class="col-sm-10">
-                           <input type="text" class="form-control" th:field="*{category}" th:required="true"/>
-                        </div>
-                        </div>
-
-
-                                  <div class="form-group">
-                                  <div id="search">
-                                      <form style="display:inline-block" th:object="${mainDoc}" th:action="@{/mainDoc}" method="get">
-                                          <select id="optionsList">
-                                              <option th:each="categorys : ${Category}" th:value="${category.getId()}"
-                                                      th:text="${category.name()}">Options</option>
-                                          </select>
-
-                                </form>
-
-                                  </div>
-                                  </div>
-
-                                  <select id="provider" class="form-control">
-                                      <option th:value="0" >Select a Service Provider</option>
-                                      <option th:each="category : ${Category}"  th:value="${category.id}" th:text="${category.name}"></option>
-                                  </select>
-                        -->
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Category</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">Category :</label>
+                <div class="col-sm-10 center-block">
                     <select th:field="*{category}" th:required="true" class="form-control">
                         <option th:value="0">Select category</option>
                         <option th:each="category : ${categories}" th:value="${category.id}"
@@ -76,8 +49,8 @@
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Executant</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">Executant :</label>
+                <div class="col-sm-10 center-block">
                     <select th:field="*{executant}" th:required="true" class="form-control">
                         <option th:value="0">Select executant</option>
                         <option th:each="executant : ${executants}" th:value="${executant.id}"
@@ -86,26 +59,26 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">ShortDiscription</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">Discription :</label>
+                <div class="col-sm-10 center-block">
                     <input type="text" class="form-control" th:field="*{shortDis}" th:required="true"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">DateInput</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">DateInput :</label>
+                <div class="col-sm-10 center-block">
                     <input type="date" class="form-control" pattern="dd/MM/yyyy" th:field="*{dateCome}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">DateDone</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">DateDone :</label>
+                <div class="col-sm-10 center-block">
                     <input type="date" class="form-control" pattern="dd/MM/yyyy" th:field="*{dateDone}"/>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Customer</label>
-                <div class="col-sm-10">
+                <label class="col-sm-2 control-label">Customer :</label>
+                <div class="col-sm-10 center-block">
                     <select th:field="*{customer}" th:required="true" class="form-control">
                         <option th:value="0">Select customer</option>
                         <option th:each="customer : ${customers}" th:value="${customer.id}"

@@ -47,7 +47,7 @@ label {
 .jumbotron {
 
    /* margin-top: 35px; */
-  /*  margin-bottom: 35px; */
+   margin-bottom: 35px;
 }
 
 .block {
@@ -150,5 +150,20 @@ label {
     left:50%;
     margin-bottom: 70px;
 
-
+}
+.container .center-block{
+    padding-top: 2px;
+}
+.container .col-sm-10{
+    font-size: 1.3em;
+}
+.container .table-striped{
+    font-size: 1.1em;
+}
+.container .form-control{
+    font-size: 1.0em;
+    height: 43.312px;
+}
+.container .form-horizontal{
+    margin-left: 35px;
 }
