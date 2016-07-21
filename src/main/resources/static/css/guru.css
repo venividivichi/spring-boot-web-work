@@ -167,3 +167,20 @@ label {
 .container .form-horizontal{
     margin-left: 35px;
 }
+
+.center_div .form-control{
+    margin-bottom: 12px;
+    font-family: Garamond;
+    font-size: 1.6em;
+    height: 43.312px;
+}
+.container .col-sm-12{
+
+    margin-bottom: 12px;
+}
+#error{
+    font-family: Garamond;
+    font-size: 1.6em;
+    margin-left: 15px;
+    margin-bottom: 7px;
+}

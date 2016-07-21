@@ -10,7 +10,8 @@ import java.util.Date;
 
 @Entity
 @Table(name = "maindocument")
-public class MainDoc implements Serializable{
+public class
+MainDoc implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
