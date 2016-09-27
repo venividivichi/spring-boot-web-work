@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
 <head lang="en" th:fragment="head">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
@@ -25,7 +25,7 @@
 
     <h2>Documents</h2>
     <div>
-        <form data-toggle="validator" role="form" class="form-horizontal" th:object="${mainDoc}" th:action="@{/mainDoc}"
+        <form data-toggle="validator" modelAttribute="fileBucket" enctype="multipart/form-data" role="form" class="form-horizontal" th:object="${mainDoc}" th:action="@{/mainDoc}"
               method="post">
 
             <input type="hidden" class="form-control" th:field="*{id}"/>
@@ -84,6 +84,15 @@
                         <option th:each="customer : ${customers}" th:value="${customer.id}"
                                 th:text="${customer.nameO}"></option>
                     </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group col-md-12">
+                    <label class="col-md-3 control-lable" for="file">Upload a document</label>
+                    <div class="col-md-7">
+                        <input type="file" name="fileBucket" id="file" class="form-control input-sm"/>
+                    </div>
                 </div>
             </div>
 

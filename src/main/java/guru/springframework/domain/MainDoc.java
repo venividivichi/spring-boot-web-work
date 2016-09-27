@@ -10,8 +10,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "maindocument")
-public class
-MainDoc implements Serializable{
+public class MainDoc implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +19,8 @@ MainDoc implements Serializable{
     private Integer docID;
     private String shortDis;
 
-
+    @Column(name="content", nullable=false)
+    private String content;
 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date dateCome;
@@ -120,6 +120,14 @@ MainDoc implements Serializable{
 
     public Executant getExecutant() { return executant; }
     public void setExecutant(Executant executant) { this.executant = executant; }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     @Override
     public String toString() {
